@@ -1,0 +1,28 @@
+<h3>@ViewChildren + Component</h3>
+<div>
+  <writer name="Krishna" book="Angular Tutorials" #bkWriter></writer> <br/>
+  <writer name="Mahesh" book="Java Tutorials"></writer> <br/>
+  <writer name="Krishna" book="jQuery Tutorials"></writer> <br/>
+  <writer name="Bramha" book="Hibernate Tutorials" *ngIf="allWritersVisible"></writer> <br/>
+  <writer name="Vishnu" book="Spring Tutorials" *ngIf="allWritersVisible"></writer>
+</div>
+<button (click)="onShowAllWriters()" >
+  <label *ngIf="!allWritersVisible">Show More</label>
+  <label *ngIf="allWritersVisible">Show Less</label>
+</button>
+<h3>@ViewChildren + Directive</h3>
+<div appMessage></div>
+<div appMessage></div>
+<div appMessage></div>
+
+<ng-template #msgTemp>
+  Hello World!
+</ng-template>
+
+
+<h3>@ViewChildren + ElementRef</h3>
+<div>
+  <div #pname>Mohit</div>
+  <div #pname>Anup</div>
+  <div #pname>Nilesh</div>
+</div>

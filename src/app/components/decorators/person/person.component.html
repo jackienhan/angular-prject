@@ -1,0 +1,47 @@
+<app-write>
+  <appBook bookId="1" bookName="Java 8 Tutorials" *ngIf="latestBook"></appBook>
+  <appBook bookId="2" bookName="Learning Angular 4" *ngIf="!latestBook"></appBook>
+</app-write>
+<br/><button (click)="onChangeBook()">Change Book</button>
+
+<app-favourite-books>
+  <appBook bookId="1" bookName="Hibernate 4 Tutorials"></appBook>
+  <appBook bookId="2" bookName="Spring Boot Tutorials"></appBook>
+  <app-favourite-books>
+    <appBook bookId="3" bookName="Learning JavaScript"></appBook>
+  </app-favourite-books>
+  <app-favourite-books *ngIf="showAllBook">
+    <appBook bookId="4" bookName="Thymeleaf Tutorials"></appBook>
+    <appBook bookId="5" bookName="Android Tutorials"></appBook>
+  </app-favourite-books>
+</app-favourite-books>
+<br/><button (click)="onShowAllBooks()" >
+  <label *ngIf="!showAllBook">Show More</label>
+  <label *ngIf="showAllBook">Show Less</label>
+</button>
+<app-address>
+  <app-city cityId="1" cityName="Varanasi" *ngIf="homeTown"></app-city>
+  <app-city  cityId="2" cityName="Noida" *ngIf="!homeTown"></app-city>
+</app-address>
+<br/><button (click)="onChangeCity()">Change City</button>
+
+<app-friend>
+  <div #name *ngIf="bestFriend">Mahesh</div>
+  <div #name *ngIf="!bestFriend">Krishna</div>
+</app-friend>
+<br/><button (click)="onChangeFriend()">Change Friend</button>
+<br>
+<app-favourite-friends>
+  <div #name>Mohit</div>
+  <div #name>Anup</div>
+  <app-favourite-friends *ngIf="showAllFriend">
+    <div #name>Nilesh</div>
+    <div #name>Sravan</div>
+  </app-favourite-friends>
+</app-favourite-friends>
+<br/><button (click)="onShowAllFriends()" >
+  <label *ngIf="!showAllFriend">Show More</label>
+  <label *ngIf="showAllFriend">Show Less</label>
+</button>
+<br/>
+<app-vc-demo></app-vc-demo>

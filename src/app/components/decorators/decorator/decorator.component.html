@@ -1,0 +1,11 @@
+<h2>Welcome to Decorator Home</h2>
+<nav [ngClass] = "'child-menu'">
+  <ul>
+    <li><a [routerLink]="['decorator-detail']" routerLinkActive="active">decorator</a></li>
+    <li><a [routerLink]="['view-child']" routerLinkActive="active">view-child</a></li>
+  </ul>
+</nav>
+<div [ngClass] = "'child-container'">
+  <router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,12 @@
+<h2>Welcome to Form Home</h2>
+<nav [ngClass] = "'child-menu'">
+  <ul>
+    <li><a [routerLink]="['form-detail']" routerLinkActive="active">form</a></li>
+    <li><a [routerLink]="['form-builder']" routerLinkActive="active">from-builder</a></li>
+    <li><a [routerLink]="['file-upload']" routerLinkActive="active">file-upload</a></li>
+  </ul>
+</nav>
+<div [ngClass] = "'child-container'">
+  <router-outlet></router-outlet>
+</div>
+<ngx-loading [show]="isLoading" ></ngx-loading>

@@ -1,0 +1,15 @@
+<nav [ngClass] = "'parent-menu'">
+  <ul>
+    <li><a routerLink="/address" routerLinkActive="active">Address</a></li>
+    <li><a routerLink="/admin" routerLinkActive="active">Admin</a></li>
+    <li><a routerLink="/country" routerLinkActive="active">Country</a></li>
+    <li><a routerLink="/person" routerLinkActive="active">Person</a></li>
+    <li><a routerLink="/article" routerLinkActive="active" >Article</a></li>
+    <li><a routerLink="/form" routerLinkActive="active" >Form</a></li>
+    <li><a routerLink="/decorator" routerLinkActive="active" >Decorator</a></li>
+  </ul>
+</nav>
+<app-logout></app-logout>
+<div [ngClass] = "'parent-container'">
+  <router-outlet></router-outlet>
+</div>

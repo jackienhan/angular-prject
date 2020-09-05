@@ -1,0 +1,4 @@
+<div *ngIf="loggedInUser">
+  Logged In: {{loggedInUser.username}} | {{loggedInUser.role}} |
+  <button input='input' (click)="logout()">Logout</button>
+</div>
